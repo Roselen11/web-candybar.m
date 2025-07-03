@@ -25,6 +25,8 @@ body {
   src: url('../estilos/tipografias.css/Bimbo\ Trial.ttf') format('truetype');
 }
 
+/*--------------------------------------------------------------------------------------------------------------*/
+
 /* NAVEGACION */
 nav {
   /*position: fixed; SIRVE PARA QUE EL MENU QUEDE FIJO AL BAJAR*/
@@ -60,7 +62,7 @@ nav {
 }
 
 
-/*lineas para desplegar menù*//* ==== BOTÓN HAMBURGUESA ==== */
+/* ==== BOTÓN HAMBURGUESA ==== */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -104,7 +106,7 @@ nav {
   text-underline-offset: 6px;
 }
 
-/* ===== MENÚ MÓVIL ===== */
+/*RESPONSIVE*/
 @media (max-width: 768px) {
   .logo {
     height: 120px;
@@ -233,7 +235,7 @@ nav {
   opacity: 1;
 }
 
-/*ADAPTADO A MOVILES*//* RESPONSIVE: TABLETS Y MÓVILES */
+/*RESPONSIVE*/
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -389,6 +391,7 @@ nav {
 }
 
 .combo-card img {
+  aspect-ratio: 1 / 1;
   width: 100%;
   max-height: 220px;
   object-fit: cover;
@@ -649,6 +652,59 @@ nav {
   transform: scale(1.2);
   color: #e573c1;
 }
+
+/*RESPONSIVE*/
+
+@media (max-width: 600px) {
+  /* Tarjetas del carrusel */
+  .combo-card {
+    min-width: 220px;
+    height: auto;
+    padding: 12px;
+  }
+
+  .combo-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+
+  .ver-mas {
+    margin-top: 12px;
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* Modal más cuadrado y compacto */
+  .modal-contenido {
+    max-width: 90vw;
+    max-height: 90vh;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  /* Galería del modal con 2 imágenes por fila */
+  .galeria img {
+    width: 47%;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Título secundario con mejor ajuste */
+  .titulo-secundario {
+    font-size: 1.4rem;
+    margin-top: -1rem;
+  }
+}
+
+
+
+
+
+
 
 
 
