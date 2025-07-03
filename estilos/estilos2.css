@@ -1090,6 +1090,37 @@ nav {
   line-height: 1.6;
 }
 
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+  .contenedor-presentacion {
+    flex-direction: column; /* Apila texto e imagen */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .texto-presentacion {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .foto-martina {
+    width: 80vw;
+    height: auto;
+  }
+
+  .texto-presentacion h2 {
+    font-size: 2.2rem;
+  }
+
+  .titulo-elegidos2 {
+    font-size: 1.4rem;
+  }
+
+  .texto-presentacion p {
+    font-size: 0.95rem;
+  }
+}
 
 /*EVENTOS*/
 
