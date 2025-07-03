@@ -697,7 +697,15 @@ nav {
   .titulo-secundario {
     font-size: 1.4rem;
     margin-top: -1rem;
+    padding-bottom: 12px; /* Espacio para la línea animada */
   }
+
+  .titulo-secundario::after {
+    bottom: 0px;                 /* Evita que la línea suba demasiado */
+    height: 6px;                 /* Más sutil en pantallas pequeñas */
+    background-size: 80px 6px;   /* Ajuste proporcional del patrón */
+  }
+
 }
 
 
