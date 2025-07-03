@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Decoradora de Eventos</title>
+    <link rel="stylesheet" href="estilos/estilos2.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/tipografias.css/Jasmine Bloom.otf">
+  </head>
+
+  <body>
+    <!-- NAVEGACION-->
+
+    <nav>
+      <div class="menu-toggle" aria-label="Menú móvil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <img src="img/logocandypng.png" alt="Logo" class="logo" />
+      
+      <div class="menu-contenedor">
+        <ul class="menu">
+          <li><a href="#banner">Inicio</a></li>
+          <li><a href="#contenedor-titulos">Combos</a></li>
+          <li><a href="#souvenirs-contenedor">Souvenirs</a></li>
+          <li><a href="#seccion-reseñas">Reseñas</a></li>
+          <li><a href="#seccion-presentacion">Presentaciòn</a></li>
+          <li><a href="#seccion-eventos">Eventos</a></li>
+        </ul>
+      </div>
+
+      <div class="bienvenida">Bienvenidos</div>
+
+    </nav>
+
+
+    <!-- BANNER-->
+    <header id = "banner" class="banner">
+      <div class="slider">
+        <img src="img/bannercandy1.svg" alt="Banner 1" class="slide active">
+        <img src="img/bannercandy1.svg" alt="Banner 2" class="slide">
+        <img src="img/bannercandy1.svg" alt="Banner 3" class="slide">
+        <div class="flecha izquierda">&#10094;</div> 
+        <div class="flecha derecha">&#10095;</div>
+
+        <div class="indicadores">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- CARRUSEL TITULO -->
+    <div id = contenedor-titulos class="contenedor-titulos">
+      <div class="titulo-principal">
+        <span class="letra1">c</span>
+        <span class="letra2">o</span>
+        <span class="letra3">m</span>
+        <span class="letra4">b</span>
+        <span class="letra5">o</span>
+        <span class="letra6">s</span>
+      </div>
+      <div class="titulo-secundario">mas elegidos</div>
+
+    </div>
+
+
+
+
+  <!-- CARRUSEL COMBOS-->
+
+    <div class="cinta-combos">
+
+      <div class="cinta-combos-interna">
+
+        <!-- Tarjetas originales -->
+        <div class="combo-card" data-combo="combo1">
+          <h3>Primer Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Primer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo1')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo2">
+          <h3>Segundo Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Segundo Combo">
+          <button class="ver-mas" onclick="abrirModal('combo2')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo3">
+          <h3>Tercer Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Tercer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo3')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo4">
+          <h3>Cuarto Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Cuarto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo4')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo5">
+          <h3>Quinto Combo</h3>
+          <p class="tipo-combo">Combo Super Completo</p>
+          <img src="img/logocandy.jpg" alt="Quinto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo5')">Ver más</button>
+        </div>
+
+        <!-- Tarjetas duplicadas para efecto infinito -->
+        <div class="combo-card" data-combo="combo1">
+          <h3>Primer Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Primer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo1')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo2">
+          <h3>Segundo Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Segundo Combo">
+          <button class="ver-mas" onclick="abrirModal('combo2')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo3">
+          <h3>Tercer Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Tercer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo3')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo4">
+          <h3>Cuarto Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Cuarto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo4')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo5">
+          <h3>Quinto Combo</h3>
+          <p class="tipo-combo">Combo Super Completo</p>
+          <img src="img/logocandy.jpg" alt="Quinto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo5')">Ver más</button>
+        </div>
+
+                <!-- Tarjetas duplicadas para efecto infinito -->
+        <div class="combo-card" data-combo="combo1">
+          <h3>Primer Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Primer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo1')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo2">
+          <h3>Segundo Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Segundo Combo">
+          <button class="ver-mas" onclick="abrirModal('combo2')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo3">
+          <h3>Tercer Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Tercer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo3')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo4">
+          <h3>Cuarto Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Cuarto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo4')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo5">
+          <h3>Quinto Combo</h3>
+          <p class="tipo-combo">Combo Super Completo</p>
+          <img src="img/logocandy.jpg" alt="Quinto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo5')">Ver más</button>
+        </div>
+
+                <!-- Tarjetas duplicadas para efecto infinito -->
+        <div class="combo-card" data-combo="combo1">
+          <h3>Primer Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Primer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo1')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo2">
+          <h3>Segundo Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Segundo Combo">
+          <button class="ver-mas" onclick="abrirModal('combo2')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo3">
+          <h3>Tercer Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Tercer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo3')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo4">
+          <h3>Cuarto Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Cuarto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo4')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo5">
+          <h3>Quinto Combo</h3>
+          <p class="tipo-combo">Combo Super Completo</p>
+          <img src="img/logocandy.jpg" alt="Quinto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo5')">Ver más</button>
+        </div>
+
+                <!-- Tarjetas duplicadas para efecto infinito -->
+        <div class="combo-card" data-combo="combo1">
+          <h3>Primer Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Primer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo1')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo2">
+          <h3>Segundo Combo</h3>
+          <p class="tipo-combo">Combo Simple</p>
+          <img src="img/logocandy.jpg" alt="Segundo Combo">
+          <button class="ver-mas" onclick="abrirModal('combo2')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo3">
+          <h3>Tercer Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Tercer Combo">
+          <button class="ver-mas" onclick="abrirModal('combo3')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo4">
+          <h3>Cuarto Combo</h3>
+          <p class="tipo-combo">Combo Completo</p>
+          <img src="img/logocandy.jpg" alt="Cuarto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo4')">Ver más</button>
+        </div>
+
+        <div class="combo-card" data-combo="combo5">
+          <h3>Quinto Combo</h3>
+          <p class="tipo-combo">Combo Super Completo</p>
+          <img src="img/logocandy.jpg" alt="Quinto Combo">
+          <button class="ver-mas" onclick="abrirModal('combo5')">Ver más</button>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal()" aria-label="Cerrar modal">&times;</span>
+
+            <h2 id="modal-titulo">Título del Combo</h2>
+
+            <p><strong>Contiene:</strong></p>
+            <ul id="modal-lista"></ul>
+
+            <div class="galeria"></div>
+
+            <p class="contacto">📞 Contacto: 11 2345-6789</p>
+
+            <a href="https://api.whatsapp.com/send?phone=542473475255&text=Hola%21%20Quiero%20tener%20informaci%C3%B3n%20sobre%20los%20combos." target="_blank" class="boton-wsp">
+              Enviar mensaje por WhatsApp
+            </a>
+
+            <button class="boton-volver" onclick="cerrarModal()">Volver</button>
+          </div>
+        </div>
+  
+
+
+
+      <!-- FRANJA CON MOVIMIENTO -->
+
+        <div class="franja-info">
+          <div class="franja-contenido">
+
+            <div class="franja-texto">
+              <span><span class="barra barra1">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+              <span><span class="barra barra2">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+            </div>
+            <div class="franja-texto">
+              <span><span class="barra barra3">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+              <span><span class="barra barra4">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+            </div>
+            <div class="franja-texto">
+              <span><span class="barra barra3">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+              <span><span class="barra barra4">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+            </div>
+            <div class="franja-texto">
+              <span><span class="barra barra3">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+              <span><span class="barra barra4">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+            </div>
+            <div class="franja-texto">
+              <span><span class="barra barra3">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+              <span><span class="barra barra4">|</span> Creamos momentos mágicos que se quedan en tu corazón&nbsp; </span>
+            </div>
+
+          </div>
+        </div>
+
+  
+  <!-- CONTENEDOR SOUVENIRS -->
+
+      <div id = "souvenirs-contenedor" class="souvenirs-contenedor">
+        <img src="img/fotopin.png" alt="Pin decorativo" class="pin-img">
+        <div class="titulo-principal">
+          <span class="letra1">s</span>
+          <span class="letra2">o</span>
+          <span class="letra3">u</span>
+          <span class="letra4">v</span>
+          <span class="letra5">e</span>
+          <span class="letra6">n</span>
+          <span class="letra2">i</span>
+          <span class="letra3">r</span>
+          <span class="letra4">s</span>
+        </div>
+      </div>
+
+
+
+
+      <!-- TARJETAS SOUVENIRS -->
+
+      <div class="grilla-souvenirs">
+        <div class="tarjeta-souvenir">
+          <img src="img/logocandy.jpg" alt="Souvenir 1">
+          <h3>Souvenir Floral</h3>
+          <p>Frasquito decorado con etiqueta personalizada y moño pastel.</p>
+          <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-wsp">contactarme</a>
+        </div>
+        <div class="tarjeta-souvenir">
+          <img src="img/logocandy.jpg" alt="Souvenir 2">
+          <h3>Mini Vela</h3>
+          <p>Vela aromática en frasco con tapa y cinta de color a elección.</p>
+          <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-wsp">contactarme</a>
+        </div>
+        <div class="tarjeta-souvenir">
+          <img src="img/logocandy.jpg" alt="Souvenir 3">
+          <h3>Tarjetita Kraft</h3>
+          <p>Diseño personalizado con frase y detalles florales en papel kraft.</p>
+          <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-wsp">contactarme</a>
+        </div>
+        <div class="tarjeta-souvenir">
+          <img src="img/logocandy.jpg" alt="Souvenir 4">
+          <h3>Mini Plantita</h3>
+          <p>Macetita con suculenta y tag personalizado. Ideal para eventos.</p>
+          <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-wsp">contactarme</a>
+        </div>
+        <div class="tarjeta-souvenir">
+          <img src="img/logocandy.jpg" alt="Souvenir 5">
+          <h3>Chocolatín Envoltorio</h3>
+          <p>Mini chocolate con envoltorio personalizado y diseño temático.</p>
+          <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-wsp">contactarme</a>
+        </div>
+        <div class="tarjeta-souvenir">
+          <img src="img/logocandy.jpg" alt="Souvenir 6">
+          <h3>Mini Perfume</h3>
+          <p>Botellita con fragancia suave y etiqueta con nombre o frase.</p>
+          <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="btn-wsp">contactarme</a>
+        </div>
+
+
+      </div>
+
+
+
+        
+      <!-- RESEÑAS -->
+      <div class="onda-superior">
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+          <path d="M0,0 C480,100 960,0 1440,100 L1440,150 L0,150 Z" fill="#ffe4ec"></path>
+        </svg>
+      </div>
+
+      <section id = "seccion-reseñas" class="seccion-reseñas">
+        <img src="img/arcoiris.svg" alt="Arcoíris decorativo" class="arcoiris">
+
+        <div class="titulo-reseñas">
+          <div class="titulo-combos">
+            <span class="letra1">r</span>
+            <span class="letra2">e</span>
+            <span class="letra3">s</span>
+            <span class="letra4">e</span>
+            <span class="letra5">ñ</span>
+            <span class="letra6">a</span>
+            <span class="letra2">s</span>
+          </div>
+          <div class="titulo-elegidos">favoritas</div>
+        </div>
+
+        <div class="cinta-reseñas">
+          <div class="cinta-interna">
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Cliente feliz">
+              <p class="texto-reseña">"¡La deco fue mágica! Cada detalle superó mis expectativas."</p>
+              <span class="nombre-cliente">— Sofía R.</span>
+            </div>
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Evento encantador">
+              <p class="texto-reseña">"Gracias por hacer que el cumple de mi hija sea inolvidable."</p>
+              <span class="nombre-cliente">— Mariana G.</span>
+            </div>
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Cliente feliz">
+              <p class="texto-reseña">"¡La deco fue mágica! Cada detalle superó mis expectativas."</p>
+              <span class="nombre-cliente">— Sofía R.</span>
+            </div>
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Evento encantador">
+              <p class="texto-reseña">"Gracias por hacer que el cumple de mi hija sea inolvidable."</p>
+              <span class="nombre-cliente">— Mariana G.</span>
+            </div>
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Cliente feliz">
+              <p class="texto-reseña">"¡La deco fue mágica! Cada detalle superó mis expectativas."</p>
+              <span class="nombre-cliente">— Sofía R.</span>
+            </div>
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Evento encantador">
+              <p class="texto-reseña">"Gracias por hacer que el cumple de mi hija sea inolvidable."</p>
+              <span class="nombre-cliente">— Mariana G.</span>
+            </div>
+
+                    <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Evento encantador">
+              <p class="texto-reseña">"Gracias por hacer que el cumple de mi hija sea inolvidable."</p>
+              <span class="nombre-cliente">— Mariana G.</span>
+            </div>
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Cliente feliz">
+              <p class="texto-reseña">"¡La deco fue mágica! Cada detalle superó mis expectativas."</p>
+              <span class="nombre-cliente">— Sofía R.</span>
+            </div>
+
+            <div class="tarjeta-polaroid">
+              <img src="img/logocandy.jpg" alt="Evento encantador">
+              <p class="texto-reseña">"Gracias por hacer que el cumple de mi hija sea inolvidable."</p>
+              <span class="nombre-cliente">— Mariana G.</span>
+            </div>  
+          </div>
+        </div>
+      <div class="corazon-latido"></div>
+      </section>
+
+
+      <!-- PRESENTACION -->
+
+      <section id = "seccion-presentacion" class="seccion-presentacion">
+        <div class="contenedor-presentacion">
+          <div class="texto-presentacion">
+            <h2>Hola, soy Martina</h2>
+            <h3 class="titulo-elegidos">Soy una emprendedora de Argentina</h3>
+            <p>
+              Soy diseñadora de eventos y amante de los detalles que hacen sonreír. 
+              Creo espacios mágicos con colores suaves, formas delicadas y mucho amor. 
+              Cada celebración es una historia, y me encanta ayudarte a contar la tuya con estilo y calidez.
+            </p>
+          </div>
+          <img src="img/logocandy.jpg" alt="Foto de Martina" class="foto-martina">
+        </div>
+      </section>
+
+
+
+    <!-- EVENTOS -->
+    <section id = seccion-eventos class="seccion-eventos">
+      <div class="titulo-eventos">
+        <span class="letra1">e</span><span class="letra2">v</span><span class="letra3">e</span>
+        <span class="letra4">n</span><span class="letra5">t</span><span class="letra6">o</span><span class="letra2">s</span>
+      </div>
+
+      <div class="filtros-eventos">
+        <button data-categoria="todos" class="activo">Todos</button>
+        <button data-categoria="cumples">Cumpleaños Infantiles</button>
+        <button data-categoria="cumples">Cumpleaños Adultos</button>
+        <button data-categoria="baby">Baby Shower</button>
+        <button data-categoria="quinces">Quinces</button>
+        <button data-categoria="casamientos">Casamientos</button>
+        <button data-categoria="añitos">Añitos</button>
+      </div>
+
+      <div class="carrusel-eventos">
+        <div class="carrusel-interno">
+          <div class="evento-card" data-categoria="cumples"><img src="img/logocandy.jpg" alt=""></div>
+          <div class="evento-card" data-categoria="baby"><img src="img/logocandy.jpg" alt=""></div>
+          <div class="evento-card" data-categoria="quinces"><img src="img/logocandy.jpg" alt=""></div>
+          <!-- Duplicado para efecto infinito -->
+          <div class="evento-card" data-categoria="cumples"><img src="img/logocandy.jpg" alt=""></div>
+          <div class="evento-card" data-categoria="baby"><img src="img/logocandy.jpg" alt=""></div>
+          <div class="evento-card" data-categoria="quinces"><img src="img/logocandy.jpg" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //activar y desactivar el menú de lineas
+        document.addEventListener('DOMContentLoaded', () => {
+          const slides = document.querySelectorAll('.slide');
+          const next = document.querySelector('.flecha.derecha');
+          const prev = document.querySelector('.flecha.izquierda');
+          const dots = document.querySelectorAll('.dot');
+          const slider = document.querySelector('.slider');
+          let index = 0;
+          let touchStartX = 0;
+
+          function showSlide(i) {
+            // Quita clase 'active' de la anterior
+            slides[index].classList.remove('active');
+            dots[index].classList.remove('active');
+
+            // Calcula nuevo índice de forma circular
+            index = (i + slides.length) % slides.length;
+
+            // Activa el nuevo slide e indicador
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+          }
+
+          // Controles manuales (botones)
+          next.addEventListener('click', () => showSlide(index + 1));
+          prev.addEventListener('click', () => showSlide(index - 1));
+
+          // Clic en los puntos indicadores
+          dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => showSlide(i));
+          });
+
+          // Reproducción automática
+          setInterval(() => showSlide(index + 1), 5000); // cada 5 segundos
+
+          // Swipe táctil (solo en móviles o pantallas táctiles)
+          slider.addEventListener('touchstart', e => {
+            touchStartX = e.touches[0].clientX;
+          });
+
+          slider.addEventListener('touchend', e => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+
+            if (diff > 50) showSlide(index + 1);    // swipe izquierda
+            if (diff < -50) showSlide(index - 1);   // swipe derecha
+          });
+        });
+
+        // 🌸 1. Banner automático
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        const next = document.querySelector('.flecha.derecha');
+        const prev = document.querySelector('.flecha.izquierda');
+
+        function showSlide(i) {
+          slides[index]?.classList.remove('active');
+          index = (i + slides.length) % slides.length;
+          slides[index]?.classList.add('active');
+        }
+
+        if (slides.length > 0) {
+          next?.addEventListener('click', () => showSlide(index + 1));
+          prev?.addEventListener('click', () => showSlide(index - 1));
+          setInterval(() => showSlide(index + 1), 4000);
+        }
+
+        // 🌷 3. Modal combos con contenido dinámico
+        window.abrirModal = (comboId) => {
+          const modal = document.getElementById('modal');
+          const titulo = document.getElementById('modal-titulo');
+          const lista = document.getElementById('modal-lista');
+          const galeria = document.querySelector('.galeria');
+
+          const contenido = {
+            combo1: {
+              titulo: "Primer Combo",
+              items: ["Arco de globos pastel", "Guirnalda personalizada", "Centro de mesa floral"],
+              imagenes: ["img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg"]
+            },
+            combo2: {
+              titulo: "Segundo Combo",
+              items: ["Caminos de mesa lavanda", "Cajitas dulces temáticas", "Kit de bienvenida"],
+              imagenes: ["img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg"]
+            },
+            combo3: {
+              titulo: "Tercer Combo",
+              items: ["Panel de yute y flores secas", "Alfombra circular y puff", "Rincón de bienvenida"],
+              imagenes: ["img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg"]
+            },
+            combo4: {
+              titulo: "Cuarto Combo",
+              items: ["Arco de globos multicolor", "Toppers para cupcakes", "Banderines arcoíris"],
+              imagenes: ["img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg"]
+            },
+            combo5: {
+              titulo: "Quinto Combo",
+              items: ["Centro de mesa de rosas", "Guirnalda con hojas", "Mantel blanco bordado"],
+              imagenes: ["img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg", "img/imagengeneral.jpg"]
+            }
+          };
+        const datos = contenido[comboId];
+          if (!datos) return;
+
+          titulo.textContent = datos.titulo;
+          lista.innerHTML = datos.items.map(i => `<li>${i}</li>`).join("");
+          galeria.innerHTML = datos.imagenes.map(src => `<img src="${src}" alt="">`).join("");
+          modal.style.display = 'flex';
+          ampliarImagenes();
+        };
+
+        window.cerrarModal = () => {
+          document.getElementById('modal').style.display = 'none';
+        };
+
+        function ampliarImagenes() {
+          document.querySelectorAll('.galeria img').forEach(img => {
+            img.addEventListener('click', () => {
+              const overlay = document.createElement('div');
+              overlay.classList.add('img-expandida');
+              const enlarged = document.createElement('img');
+              enlarged.src = img.src;
+              overlay.appendChild(enlarged);
+              document.body.appendChild(overlay);
+              overlay.addEventListener('click', () => overlay.remove());
+            });
+          });
+        }
+        // 🌈 4. Filtro por tipo de combo
+        window.filtrarCombos = (tipo) => {
+          const combos = document.querySelectorAll('.combo-card');
+          combos.forEach(card => {
+            const visible = tipo === 'todos' || card.classList.contains(tipo);
+            card.style.display = visible ? 'flex' : 'none';
+          });
+        }
+
+        // ✨ 5. Eventos - filtro por categoría
+        const botonesEventos = document.querySelectorAll('.filtros-eventos button');
+        const tarjetas = document.querySelectorAll('.evento-card');
+        const carruselEventos = document.querySelector('.carrusel-interno');
+
+        botonesEventos.forEach(boton => {
+          boton.addEventListener('click', () => {
+            botonesEventos.forEach(b => b.classList.remove('activo'));
+            boton.classList.add('activo');
+
+            const categoria = boton.dataset.categoria;
+
+            tarjetas.forEach(card => {
+              const coincide = categoria === 'todos' || card.dataset.categoria === categoria;
+              card.style.display = coincide ? 'block' : 'none';
+            });
+
+            if (carruselEventos) {
+              carruselEventos.classList.toggle('animado', categoria === 'todos');
+            }
+          });
+        });
+
+        // 🖼️ 6. Ampliación de imágenes en tarjetas de eventos
+        document.querySelectorAll('.evento-card img').forEach(img => {
+          img.addEventListener('click', () => {
+            const fondo = document.createElement('div');
+            fondo.classList.add('fondo-difuso');
+            const imagenClon = img.cloneNode();
+            imagenClon.classList.add('expandido');
+            document.body.appendChild(fondo);
+            document.body.appendChild(imagenClon);
+            fondo.addEventListener('click', () => {
+              fondo.remove();
+              imagenClon.remove();
+            });
+          });
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+  
+  <footer class="pie-pagina">
+    <p class="frase-contacto">¿Querés que tu evento sea inolvidable? ¡Contactame!</p>
+    <h3 class="titulo-elegidos2">Contacto</h3>
+
+    <div class="enlaces-contacto">
+      <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="boton-contacto">WhatsApp</a>
+      <a href="https://instagram.com/tuusuario" target="_blank" class="boton-contacto">Instagram</a>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
